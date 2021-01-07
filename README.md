@@ -10,9 +10,11 @@ http://kukawski.pl/mit-license.txt
 Details
 -------
 
-This is second version of the library. Previously the library defined a class, but an object oriented approach, especially error handling using exceptions is not very "native"-PHP, at least not yet, so a decision was made to turn the library into a single function, which returns false on failure.
+This is second version of the library. Previously, the library used an object-oriented design, but it wasn't very user/developer friendly. A single function approach is much simpler to use and follows design principles of many PHP standard library features.
 
-The first version of the library is available under v1 branch: https://github.com/kukawski/googl-php/tree/v1
+The first version of the library is available on v1 branch: https://github.com/kukawski/googl-php/tree/v1
+
+The project is now archived, because Goo.gl reached its end of life.
 
 Sample code
 -----------
@@ -20,7 +22,7 @@ Sample code
     
     $shortcut = googl('https://github.com/kukawski/googl-php'); // https://goo.gl/XykKB
     
-    if ($shortcut !== null) {
+    if (!$shortcut) {
         $long = googl('https://goo.gl/XykKB', 'expand');
     }
 
